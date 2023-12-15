@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block main %}
+<h1 style="padding-top: 50px;">Welcome to the Scales and Diatonic Chords Generator!</h1>
+
+<h3 style="padding-top: 35px;">Description</h3>
+<p style="text-align: justify">
+    This is my final project for the CS50x course from HarvardX. It was a great learning experience, 
+    bringing together most aspects of the CS50x course, namely the HTML, CSS, JavaScript and Python backend. 
+</p>
+    
+<p style="text-align: justify">
+    In addition, I had very little knowledge of CSS and JavaScript before taking this course.
+    I am very happy that I have been able to use Bootstrap for the layout and also incorporate some AJAX calls 
+    and async functions in JavaScript. The application is very dynamic and responsive, using those technologies.
+    This application has been tested on macOS, using Chrome, Firefox and Safari.
+</p>
+
+<p style="text-align: justify">
+    I am also very grateful for open-source projects such as WebAudioFont and VexFlow, which allowed for some very
+    nice features to be added to this web application. These libraries can do so much more than what I needed,
+    but it allowed me to focus on the core of my application instead of reinventing the wheel.
+</p>
+
+
+<h3 style="padding-top: 35px;">Tools, Components and Libraries</h3>
+<p style="text-align: justify">
+    This application was developed using the following tools, components and libraries:
+</p>
+
+<ul>
+    <li>My own Music_Theory class, written in Python, initially developed for <a href="https://github.com/antoine-reid/cs50p">my CS50P project</a></li>
+    <li><a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap</a> 5.2.3, for the Navbar and layout utilities (flex, etc)</li>
+    <li><a href="https://flask.palletsprojects.com/en/3.0.x/">Flask</a> 3.0.0, to execute the Python code in the backend</li>
+    <li><a href="https://github.com/surikov/webaudiofont">WebAudioFont</a>, a very nice library to allow music notes and chords playback, directly from the web browser</li>
+    <li><a href="https://github.com/0xfe/vexflow">VexFlow</a> 4.2.3, an <i>excellent</i> library to display the staves, notes, chords, accidentals, etc</li>
+    <li><a href="https://inkscape.org/">Inkscape</a>, to produce the SVG files for the logo, the circle of fifths, the play and stop buttons</li>
+    <li><a href="https://code.visualstudio.com/">Visual Studio Code</a> running on my local workstation</li>
+    <li><a href="https://validator.w3.org/">W3C Markup Validation Service</a> to validate the syntax of the HTML pages</li>
+</ul>
+
+<p style="text-align: justify; padding-top: 35px;">
+    As I am starting to learn piano, I already find this application incredibly useful.
+    I hope it can be of use to someone else.
+</p>
+
+<p>
+    Antoine
+</p>
+
+{% endblock %}
