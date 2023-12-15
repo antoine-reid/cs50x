@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Scales and Chords
+{% endblock %}
+
+{% block main %}
+    <h1 style="text-align: center; padding-bottom: 50px;">Scales and Diatonic Chords</h1>
+    <div class="d-flex flex-wrap justify-content-center">
+        <div class="p-1 mx-auto">
+            {% include "Circle_of_Fifths.svg" %}<br><br><br>
+        </div>
+
+        <div class="p-1 mx-auto">
+            <div>
+                <h3 style="padding-left: 15px; padding-bottom: 10px;">Please select a scale</h3>
+                <form name="scale_form" id="scale_form" class="form-inline" method="post">
+                    <div class="row g-1 align-items-center mx-auto">
+                        <div class="col-auto">
+                            <button class="btn btn-link form-control" id="highlight_reset">RESET</button>
+                        </div>
+                        <div class="col-auto">
+                            <select class="form-control form-select w-auto" id="scale_select">
+                                <option selected value="C">C</option>
+                                <option value="C#">C♯</option>
+                                <option value="Db">D♭</option>
+                                <option value="D">D</option>
+                                <option value="D#">(D♯)</option>
+                                <option value="Eb">E♭</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="F#">F♯</option>
+                                <option value="Gb">G♭</option>
+                                <option value="G">G</option>
+                                <option value="G#">(G♯)</option>
+                                <option value="Ab">A♭</option>
+                                <option value="A">A</option>
+                                <option value="A#">(A♯)</option>
+                                <option value="Bb">B♭</option>
+                                <option value="B">B</option>
+                                <option value="Cb">C♭</option>
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <select class="form-control form-select w-auto" id="type_select">
+                                <option selected value="major">Major</option>
+                                <option value="minor">Natural minor</option>
+                                <option value="harmonic minor">Harmonic minor</option>
+                                <option value="melodic minor">Melodic minor</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="container" hidden id="results">
+                <br><br>
+                <p style="padding-bottom: 15px;">
+                    Here are the notes and diatonic chords of the selected scale.<br>
+                    Click on either play button to hear the notes.
+                </p>
+                <hr>
+                <div class="row g-1" style="padding-left: 5px; padding-right: 5px; padding-top: 5px;">
+                    <div class="col-auto" id="scale_staff"></div>
+                    <div class="col-auto" style="padding-left: 5px; padding-top: 73px;">
+                        <img alt="Play/Stop button" id="scale_play_button" src="/static/images/play.svg" width="20" height="20"
+                            onclick="start_stop_playback(playback_notes, 'scale_play_button');">
+                    </div>
+                </div>
+                <br><br>
+                <hr>
+                <div class="row g-1" style="padding-left: 5px; padding-right: 5px; padding-top: 5px;">
+                    <div class="col-auto" id="chords_staff"></div>
+                    <div class="col-auto" style="padding-left: 5px; padding-top: 73px;">
+                        <img alt="Play/Stop button" id="chords_play_button" src="/static/images/play.svg" width="20" height="20"
+                            onclick="start_stop_playback(playback_chords, 'chords_play_button');">
+                    </div>
+                </div>    
+                <br><br>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/scales.js"></script>
+{% endblock %}
