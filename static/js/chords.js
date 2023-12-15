@@ -27,7 +27,7 @@ async function execute_form() {
 
     // Draw the chord staff
     let vexnotes_array = await arpeggiate_single_chord_to_vexnotes(chord_name, 4, 'q', add_extra_root_note);
-    draw_arpegiatted_chord_staff(vexnotes_array[0]);
+    draw_arpeggiated_chord_staff(vexnotes_array[0]);
 
     // Prepare the notes for the scale and chords, ready for playback
     let results_array = await arpeggiate_single_chord_to_notes(chord_name, 4, 1/8, add_extra_root_note);
@@ -37,7 +37,7 @@ async function execute_form() {
     document.getElementById('results').removeAttribute('hidden');
 }
 
-function draw_arpegiatted_chord_staff(vexnotes) {
+function draw_arpeggiated_chord_staff(vexnotes) {
     // Create an SVG renderer and attach it to the DIV element named 'chord_staff'.
     const chord_staff = document.getElementById('chord_staff');
     chord_staff.innerHTML = '';
