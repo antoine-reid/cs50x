@@ -1,3 +1,4 @@
 # required Python modules
 Flask
 pytest
+gunicorn
